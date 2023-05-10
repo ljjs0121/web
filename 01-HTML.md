@@ -60,11 +60,32 @@ HTML (HyperText Markup Language)은 웹페이지를 기술하기 위한 마크�
 
 ### 2. 속성(Attribute)
 - 속성의 요소(엘리먼트)의 성질, 특징을 정의하는 명세다.
+  ```html
+    <img src="sample.png" width="100" height="60" alt="샘플사진"/>
+    * 속성은 시작 태그에 위치한다.
+    * 속성은 속성명과 속성값으로 구성된다.
+      속성명   속성값
+      src      sample.png
+      width    100
+      height   60
+      alt   
+    * 속성명과 속성명을 정의할 때는 속성명="속성값" 혹은 속성명='속성값'의 형식으로 작성할 수 있다.
+    * 속성명과 속성값 사이에 공백을 추가하지 않는다.
+    * 속성값은 반드시 쌍따옴표는 홑따옴표로 감싼다.
+    * 속성을 작성하는 정해진 순서는 존재하지 않는다.
+    * 요소에 속성을 중복해서 정의할 수 없다.
+    * 어떤 속성은 속성값에 사용할 수 있는 값이 미리 정해져 있기도 한다.
+      <input type="속성값" />
+      * input요소의 type 속성의 속성값은 text, password, radio, checkbox, date, file, ... 중에서 하나다.
+    * 어떤 속성은 기본값이 지정되어 있다.
+      <input type="속성값">
+      * input요소의 type 속성의 기본값은 text다.
+  ```
 - 모든 요소(엘리먼트)는 속성을 가질 수 있으며, 속성은 요소에 추가적인 정보를 제공한다.
- ```html
+   ```html
    <input type="text" name="username" value="홍길동" />
    <img src="sample.png" width="100" height="60" alt="샘플사진"/>
    <a href="home.html">홈</a>
- ```
+  ```
 
 
