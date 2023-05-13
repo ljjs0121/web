@@ -1,6 +1,6 @@
-## 8. 폼과 폼 요소
+# 폼과 폼 요소
 
-- 폼 태그
+## 폼 태그
   * 사용자가 입력한 데이터를 수집하고, 서버 전송하기 위해서 사용되는 태그다.
   * ```<form>``` 태그가 있다.
   * ```<form>``` 태그는 다양한 입력 양식 태그를 포함할 수 있다.
@@ -43,10 +43,10 @@
         -->
         ```
 
-- ```<input>``` 태그
+## ```<input>``` 태그
   + 사용자로부터 데이터를 입력받기 위해서 사용된다.
   + ```<input>``` 태그가 있다.
-  + ```<input>``` 태그의 type 속성값에 따라서 다양한 종류의 입력필드를 정의할 수 있다.
+  + ```<input>``` 태그의 ```type 속성값```에 따라서 다양한 종류의 입력필드를 정의할 수 있다.
   + 주요 속성
     * type
       + 입력필드의 타입을 지정한다.
@@ -66,6 +66,7 @@
         |```<input type="hidden" />```|숨김필드|
         |```<input type="email" />```|이메일 입력필드|
         |```<input type="url" />```|url 입력필드|
+	
     * ```value```
       - 입력필드의 값을 지정한다.
       - 체크박스, 라디오버튼은 value 속성으로 값을 미리 지정해야 한다.
@@ -73,10 +74,10 @@
         ```html
         <input type="text" name="username" value="홍길동" />
 
-	<input type="radio" name="gender" value="male" /> 남자
+        <input type="radio" name="gender" value="male" /> 남자
         <input type="radio" name="gender" value="female" /> 여자
         ```
-    * ```name``
+    * ```name```
       - 입력필드의 값이 서버로 전송될 때 값의 이름을 지정한다.
       - 입력필드에서 name 속성은 꼭 설정해야되는 속성값이다.
       - 입력필드에 name 속성이 없으면 해당 입력필드의 값이 서버로 전달되지 않는다.
@@ -103,7 +104,7 @@
         <input type="number" name="amount" min="0" max="1000" step="10" />
         ```
 
-- select 태그
+## ```<select>``` 태그
   * 콤보박스 생성하는 태그다.
   * 복수개의 아이템 중에서 하나 혹은 여러개를 선택할 수 있다.
   * ```<select>``` 태그는 여러 개의 옵션 태그를 포함한다.
@@ -112,17 +113,44 @@
 
   ```html
   <select name="city">
-  	<option value=""> -- 선택하세요 --</option>
-	<option value="seoul">서울</>
-	<option value="pusan">부산</>
-	<option value="daegu">대구</><option value="incheon">인천</>
-			<option value="tadjeon">대전</>
-			<option value="Gwangju">광주</>
-			<option value="ulsan">울산</>
-			<option value="sejong">세종특별시</>
-		</select>
+          <option value=""> -- 선택하세요 --</option>
+          <option value="seoul">서울</>
+          <option value="pusan">부산</>
+          <option value="daegu">대구</>
+          <option value="incheon">인천</>
+          <option value="tadjeon">대전</>
+          <option value="Gwangju">광주</>
+          <option value="ulsan">울산</>
+          <option value="sejong">세종특별시</>
+  </select>
   ```
-
+  - ```<select>```의 속성
+    |값|설명|
+    |--|--|
+    |name|서버로 전송된 값의 이름을 지정한다.|
+    |size|한번에 표시되는 욥션의 개수를 지정한다.|
+    |	 |기본은 1이다.|
+    |multiple|옵션을 복수개 선택가능하게 한다.|
+  - ```<option>```의 속성
+    |값|설명|
+    |--|--|
+    |value|옵션의 값을 지정한다.|
+    |selected|해당 옵션이 기본으로 선택된다.|
+    |disabled|해당 옵션은 선택할 수 없다.|
+  
+## ```<textare>``` 태그
+ - 여러 줄 입력 가능한 입력필드를 정의한다.
+ - 여는 태그와 닫는 태그를 반드시 기술해야 한다.
+ - 입력필드의 값은 여는 태그와 닫는 태그 사이에 적는다.
+   ```html
+   <input type="text" value="입력값" />
+   <textarea>입력값</textarea>
+   ```
+ - 주요 속성
+   |값|설명|
+   |--|--|
+   |rows|라인 개수를 지정한다.|
+   |cols|표시되는 너비를 지정한다.|
 
 
 
