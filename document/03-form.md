@@ -152,11 +152,57 @@
    |rows|라인 개수를 지정한다.|
    |cols|표시되는 너비를 지정한다.|
 
+## 폼 입력양식의 속성
 
+|태그명|	구분|	속성명|	     속성값|	                       설명|
+|:--:|:--:|:--:|:--:|:--:|
+|form|	      |     method|         get, post|	                        요청방식을 지정한다.|
+|    |        |     action|         텍스트|                               폼 입력값을 전달받아서 처리하는 웹 애플리케이션 정보|
+|    |        |     enctype|        ```application/x-www-form-urlencoded``` ```multipart/form-data```|   폼 입력값의 인코딩 방식을 지정한다.|
+|input|```type=checkbox```|   |                   |                                                         |			
+|       |       |   checked|       checked|                              체크박스의 체크여부를 지정한다.|
+|       |```type=radio```|       |              |                                                          |			
+|       |       |checked|           checked|                              라디오버튼의 체크여부를 지정한다.|
+|option |       |selected|         selected|                             옵션의 선택여부를 지정한다.|
+|       |       |disabled|         disabled|                             해당 옵션을 비활성화한다.|
+|input  |```type=text```|	|                  |	                                                |
+|       |```tpye=password```|	|                  |	                                                |
+|       |	|minlength|        숫자|                                 최소문자길이를 지정한다.|
+|       |	|maxlength|        숫자|                                 최대문자열길이를 지정한다.|
+|input  |```type=number```|	|              |	                                                |
+|       |	|min|              숫자|	                                최소값|
+|       |	|max|              숫자|                                  최대값|
+|       |       |step|             숫자|                                  증감치|
+|input	|```type=file```|    |              |                                        |
+|	|       |accept|         audio/\*|                                 첨부가능한 파일의 종류를 지정한다.|
+|       |       |       |       video/\*|
+|       |       |       |       image/\*|
+|       |       |       |       .jpg|
+|       |       |       |       .png|
+|       |       |       |       .xls|
+|       |       |       |	        |                                  <input type="file" accept="image/*,video/*" />|
+|       |       |       |               |                                   이미지와 비디오만 첨부할 수 있다.|
+|select|      |size|	           숫자|                                   한번에 표시되는 옵션의 개수를 지정한다.|
+|       |       |multiple|	multiple|                                  옵션의 복수개 선택가능여부를 지정한다.|
+|textarea|      |rows|             숫자|                                   최대 라인 수를 지정한다.|
+|       |       |cols|             숫자|                                   최대 너비를 지정한다.|
+|input| | | | |				
+|select| | | | |		
+|textarea| | | | |			
+|       |       |name|            텍스트|                                  입력양식에 이름을 지정한다.|
+|       |       |disabled|      disabled|                                  입력양식을 비활성화한다.|
+|       |       |readonly|      readonly|                                  입력양식의 값을 읽기전용으로 설정한다. 값변경 불가능 ```(checkbox와 radio 버튼은 제외)```|
 
-
-
-
+- 모든 폼입력양식```(input, select, textarea)```에 **name 속성을 지정하자.**
+- ```체크박스, 라디오버튼```에는 **value 속성을 지정하자.**
+- ```첨부파일 업로드```가 있는  ```form에는 enctype="multiple"/form=data"``` 속성을 지정하자.
+- ```첨부파일 필드```는 value 속성으로 **값을 설정할 수 없다.**
+- 모든 폼입력양식은 ```disableed="disabled"``` 속성이 적용되면 해당 폼 입력값은 **수정할 수 없고, 서버로 전달되지 않는다.**
+- ```checkbox, radio를 제외한``` 모든 폼입력방식은 ```readonly``` **속성을 지정해서 읽기 전용 필드로 지정할 수 있다.**
+- ```모든 폼입력방식```은 **form 태그 내부에 존재할 때만 서버로 전송할 수 있다.**
+- 폼 입력 값을 서버로 전송시키는 ```(<button type="submit">전송</button>, <input type="submit" value="전송" />, <button>)``` 버튼은 **form 태그 내부에 존재해야 한다.**
+- 폼 내부에 위치하고 있는 입력필드 ```(<checkbox>, <radio>, <textarea>, <select>는 제외)```에서 Enter를 입력하면 그 **입력필드가 위치하고 있는 폼의 모든 입력값이 서버로 전송된다.**
+- **폼태그 내부에 폼태그를 포함할 수 없다.**
 
 
 
